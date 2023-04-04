@@ -1,0 +1,545 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Jakub Sleczek, ITWL, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Guest\OneDrive - Instytut Techniczny Wojsk Lotniczych\Dokumenty\Boards\ST\proj18_ssd1306_i2c\proj18_ssd1306_i2c.uvprojx
+Project File Date:  03/24/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(2): warning: In file included from...
+./ssd1306.h(5): warning: In file included from...
+./i2c.h(4): warning: In file included from...
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(2): warning: In file included from...
+./ssd1306.h(7): warning: In file included from...
+./font.c(99): warning: no newline at end of file [-Wnewline-eof]
+};
+  ^
+main.c(21): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                ax = ((int16_t)sensors_data[0]<<8)  | (int16_t)sensors_data[1];
+                   ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(22): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                ay = ((int16_t)sensors_data[2]<<8)  | (int16_t)sensors_data[3];
+                   ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(23): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                az = ((int16_t)sensors_data[4]<<8)  | (int16_t)sensors_data[5];
+                   ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(27): warning: implicit conversion turns floating-point number into integer: 'double' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                roll = atan2(acc_y, acc_z) * 57.3;
+                     ~ ~~~~~~~~~~~~~~~~~~~~^~~~~~
+main.c(27): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                roll = atan2(acc_y, acc_z) * 57.3;
+                       ~~~~~        ^~~~~
+main.c(27): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                roll = atan2(acc_y, acc_z) * 57.3;
+                       ~~~~~ ^~~~~
+main.c(28): warning: implicit conversion turns floating-point number into integer: 'double' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                pitch = atan2(-acc_x, sqrt((acc_y * acc_y) + (acc_z * acc_z))) * 57.3;          
+                      ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+main.c(28): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                pitch = atan2(-acc_x, sqrt((acc_y * acc_y) + (acc_z * acc_z))) * 57.3;          
+                                      ~~~~ ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+main.c(28): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                pitch = atan2(-acc_x, sqrt((acc_y * acc_y) + (acc_z * acc_z))) * 57.3;          
+                        ~~~~~ ^~~~~~
+13 warnings generated.
+compiling main.c...
+i2c.c(1): warning: In file included from...
+./i2c.h(4): warning: In file included from...
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+i2c.c(70): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C1->DR = saddr<<1 | 0;  //shift by 1 bit couse saddr is 7 bits to 8 bits space register DR 
+                 ~ ~~~~~~~~~^~~
+i2c.c(90): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C1->DR = (saddr<<1) | 1;
+                 ~ ~~~~~~~~~~~^~~
+i2c.c(102): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+        *data++ = I2C1->DR;
+                ~ ~~~~~~^~
+i2c.c(56): warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+        volatile int tmp;
+                     ^
+i2c.c(120): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C1->DR = saddr<<1;  //shift by 1 bit couse saddr is 7 bits to 8 bits space register DR 
+                 ~ ~~~~~^~~
+i2c.c(139): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C1->DR = (saddr<<1) | 1;
+                 ~ ~~~~~~~~~~~^~~
+i2c.c(157): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+                        *data++ = I2C1->DR;
+                                ~ ~~~~~~^~
+i2c.c(164): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+                        *data++ = I2C1->DR;             
+                                ~ ~~~~~~^~
+i2c.c(106): warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                volatile int tmp;
+                             ^
+i2c.c(183): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C1->DR = saddr<<1;  //shift by 1 bit couse saddr is 7 bits to 8 bits space register DR 
+                 ~ ~~~~~^~~
+i2c.c(172): warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+        volatile int tmp;
+                     ^
+i2c.c(197): warning: comparison of integers of different signs: 'int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+        for(int i = 0; i< n; i++){
+                       ~^ ~
+i2c.c(281): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C2->DR = saddr<<1 | 0;  //shift by 1 bit couse saddr is 7 bits to 8 bits space register DR 
+                 ~ ~~~~~~~~~^~~
+i2c.c(301): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C2->DR = (saddr<<1) | 1;
+                 ~ ~~~~~~~~~~~^~~
+i2c.c(313): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+        *data++ = I2C2->DR;
+                ~ ~~~~~~^~
+i2c.c(267): warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+        volatile int tmp;
+                     ^
+i2c.c(331): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C2->DR = saddr<<1;  //shift by 1 bit couse saddr is 7 bits to 8 bits space register DR 
+                 ~ ~~~~~^~~
+i2c.c(350): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C2->DR = (saddr<<1) | 1;
+                 ~ ~~~~~~~~~~~^~~
+i2c.c(368): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+                        *data++ = I2C2->DR;
+                                ~ ~~~~~~^~
+i2c.c(375): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+                        *data++ = I2C2->DR;             
+                                ~ ~~~~~~^~
+i2c.c(317): warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+                volatile int tmp;
+                             ^
+i2c.c(394): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        I2C2->DR = saddr<<1;  //shift by 1 bit couse saddr is 7 bits to 8 bits space register DR 
+                 ~ ~~~~~^~~
+i2c.c(383): warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+        volatile int tmp;
+                     ^
+i2c.c(408): warning: comparison of integers of different signs: 'int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+        for(int i = 0; i< n; i++){
+                       ~^ ~
+27 warnings generated.
+compiling i2c.c...
+ssd1306.c(2): warning: In file included from...
+./ssd1306.h(5): warning: In file included from...
+./i2c.h(4): warning: In file included from...
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+ssd1306.c(2): warning: In file included from...
+./ssd1306.h(7): warning: In file included from...
+./font.c(99): warning: no newline at end of file [-Wnewline-eof]
+};
+  ^
+ssd1306.c(144): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+ chTemp = 1 << (7 - chBx);
+        ~ ~~^~~~~~~~~~~~~
+ssd1306.c(159): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+ chTemp = 1 << (7 - chBx);
+        ~ ~~^~~~~~~~~~~~~
+ssd1306.c(229): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+                        DrawPoint(x + i, y + j, 1);
+                        ~~~~~~~~~        ~~^~~
+ssd1306.c(229): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+                        DrawPoint(x + i, y + j, 1);
+                        ~~~~~~~~~ ~~^~~
+ssd1306.c(257): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                return (int16_t)(pitch_deg / 2 * cos(roll_rad)); //2deg is 1px
+                                                 ~~~ ^~~~~~~~
+ssd1306.c(260): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                return (int16_t)(pitch_deg * 1 * sin(roll_rad)); //1deg is 1px
+                                                 ~~~ ^~~~~~~~
+ssd1306.c(265): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b=(int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL * sin(roll_rad)));
+                                                                                                        ~~~ ^~~~~~~~
+ssd1306.c(265): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b=(int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL * sin(roll_rad)));
+                                    ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(267): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL/cos(roll_rad)));
+                                                                                 ~~~ ^~~~~~~~
+ssd1306.c(267): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL/cos(roll_rad)));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(269): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_VERTICAL + PX180DEG_HORIZONTAL * cos(roll_rad)));
+                                                                                                       ~~~ ^~~~~~~~
+ssd1306.c(269): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_VERTICAL + PX180DEG_HORIZONTAL * cos(roll_rad)));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(272): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_VERTICAL + PX180DEG_HORIZONTAL * sin(roll_rad - PI/2)));
+                                                                                                       ~~~ ~~~~~~~~~^~~~~~
+ssd1306.c(272): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_VERTICAL + PX180DEG_HORIZONTAL * sin(roll_rad - PI/2)));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(274): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL/-cos(roll_rad)));
+                                                                                  ~~~ ^~~~~~~~
+ssd1306.c(274): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL/-cos(roll_rad)));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(276): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b=(int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL * sin(roll_rad)));
+                                                                                                        ~~~ ^~~~~~~~
+ssd1306.c(276): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b=(int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL * sin(roll_rad)));
+                                    ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(279): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL*(-sin(roll_rad))));
+                                                                                                         ~~~ ^~~~~~~~
+ssd1306.c(279): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL*(-sin(roll_rad))));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(281): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL/cos(roll_rad)));               
+                                                                                 ~~~ ^~~~~~~~
+ssd1306.c(281): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL/cos(roll_rad)));               
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(283): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_VERTICAL + PX180DEG_HORIZONTAL*cos(roll_rad)));
+                                                                                                     ~~~ ^~~~~~~~
+ssd1306.c(283): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_VERTICAL + PX180DEG_HORIZONTAL*cos(roll_rad)));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(286): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_VERTICAL + PX180DEG_HORIZONTAL*sin(roll_rad - PI/2)));
+                                                                                                     ~~~ ~~~~~~~~~^~~~~~
+ssd1306.c(286): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_VERTICAL + PX180DEG_HORIZONTAL*sin(roll_rad - PI/2)));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(288): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL/-cos(roll_rad)));
+                                                                                  ~~~ ^~~~~~~~
+ssd1306.c(288): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL/-cos(roll_rad)));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(290): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL +PX180DEG_HORIZONTAL*(-cos(roll_rad))));
+                                                                                                        ~~~ ^~~~~~~~
+ssd1306.c(290): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        b= (int16_t)((float)pitch_deg/180 * (PX180DEG_HORIZONTAL +PX180DEG_HORIZONTAL*(-cos(roll_rad))));
+                                     ~~~~~~~~~~~~~~~~^~~~ ~
+ssd1306.c(289): warning: variable 'b' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+                else if(roll_deg>-180 && roll_deg < -180+HELPER) 
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ssd1306.c(292): note: uninitialized use occurs here
+        return b;
+               ^
+ssd1306.c(289): note: remove the 'if' if its condition is always true
+                else if(roll_deg>-180 && roll_deg < -180+HELPER) 
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ssd1306.c(289): warning: variable 'b' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+                else if(roll_deg>-180 && roll_deg < -180+HELPER) 
+                        ^~~~~~~~~~~~~
+ssd1306.c(292): note: uninitialized use occurs here
+        return b;
+               ^
+ssd1306.c(289): note: remove the '&&' if its condition is always true
+                else if(roll_deg>-180 && roll_deg < -180+HELPER) 
+                        ^~~~~~~~~~~~~~~~
+ssd1306.c(253): note: initialize the variable 'b' to silence this warning
+        int16_t b;
+                 ^
+                  = 0
+ssd1306.c(302): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL * sin(roll_rad));
+                                                                                     ~~~ ^~~~~~~~
+ssd1306.c(304): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_HORIZONTAL/cos(roll_rad));
+                                                             ~~~ ^~~~~~~~
+ssd1306.c(306): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_VERTICAL + PX180DEG_HORIZONTAL * cos(roll_rad));
+                                                                                   ~~~ ^~~~~~~~
+ssd1306.c(309): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_VERTICAL + PX180DEG_HORIZONTAL * sin(roll_rad - PI/2));
+                                                                                   ~~~ ~~~~~~~~~^~~~~~
+ssd1306.c(311): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_HORIZONTAL/-cos(roll_rad));
+                                                              ~~~ ^~~~~~~~
+ssd1306.c(313): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL * sin(roll_rad));
+                                                                                     ~~~ ^~~~~~~~
+ssd1306.c(316): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL*(-sin(roll_rad)));
+                                                                                     ~~~ ^~~~~~~~
+ssd1306.c(318): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_HORIZONTAL/cos(roll_rad));            
+                                                             ~~~ ^~~~~~~~
+ssd1306.c(320): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_VERTICAL + PX180DEG_HORIZONTAL*cos(roll_rad));
+                                                                                 ~~~ ^~~~~~~~
+ssd1306.c(323): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_VERTICAL + PX180DEG_HORIZONTAL*sin(roll_rad - PI/2));
+                                                                                 ~~~ ~~~~~~~~~^~~~~~
+ssd1306.c(325): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_HORIZONTAL/-cos(roll_rad));
+                                                              ~~~ ^~~~~~~~
+ssd1306.c(327): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        return (int16_t)(PX180DEG_HORIZONTAL + PX180DEG_HORIZONTAL*(-cos(roll_rad)));
+                                                                                     ~~~ ^~~~~~~~
+ssd1306.c(328): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+ssd1306.c(346): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+        sin_roll = sin(roll_rad);
+                 ~ ^~~~~~~~~~~~~
+ssd1306.c(346): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        sin_roll = sin(roll_rad);
+                   ~~~ ^~~~~~~~
+ssd1306.c(347): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+        cos_roll = cos(roll_rad);
+                 ~ ^~~~~~~~~~~~~
+ssd1306.c(347): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        cos_roll = cos(roll_rad);
+                   ~~~ ^~~~~~~~
+ssd1306.c(466): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        x0_p = i*a2+x-b*sin_roll;
+                             ~ ~~~~~~^~~~~~~~~~~
+ssd1306.c(467): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        y0_p = y+i-b*cos_roll;
+                             ~ ~~~^~~~~~~~~~~
+ssd1306.c(468): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        x0_n = -i*a2+x-b*sin_roll;
+                             ~ ~~~~~~~^~~~~~~~~~~
+ssd1306.c(469): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        y0_n = y-i-b*cos_roll;
+                             ~ ~~~^~~~~~~~~~~
+ssd1306.c(470): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        next_line_sin = PX180DEG*sin_roll;
+                                      ~ ~~~~~~~~^~~~~~~~~
+ssd1306.c(471): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        next_line_cos = PX180DEG*cos_roll;
+                                      ~ ~~~~~~~~^~~~~~~~~
+ssd1306.c(488): warning: misleading indentation; statement is not part of the previous 'if' [-Wmisleading-indentation]
+                                for(j = 0; j<PX180DEG; j+=FILL_DENSITY){
+                                ^
+ssd1306.c(484): note: previous statement is here
+                        if((x0_n+next_line_sin>=0) && (x0_n+next_line_sin<WIDTH) && (y0_n+next_line_cos>=0) && (y0_n+next_line_cos<HEIGHT)) 
+                        ^
+ssd1306.c(490): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_p+j*sin_roll, y0_p+j*cos_roll, 1);
+                                                ~~~~~~~~~~~~                  ~~~~^~~~~~~~~~~
+ssd1306.c(490): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_p+j*sin_roll, y0_p+j*cos_roll, 1);
+                                                ~~~~~~~~~~~~ ~~~~^~~~~~~~~~~
+ssd1306.c(492): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_n+j*sin_roll, y0_n+j*cos_roll, 1);
+                                                ~~~~~~~~~~~~                  ~~~~^~~~~~~~~~~
+ssd1306.c(492): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_n+j*sin_roll, y0_n+j*cos_roll, 1);
+                                                ~~~~~~~~~~~~ ~~~~^~~~~~~~~~~
+ssd1306.c(496): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_p-next_line_sin-j*sin_roll, y0_p-next_line_cos-j*cos_roll, 1);
+                                                ~~~~~~~~~~~~                                ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ssd1306.c(496): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_p-next_line_sin-j*sin_roll, y0_p-next_line_cos-j*cos_roll, 1);
+                                                ~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ssd1306.c(498): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_n-next_line_sin-j*sin_roll, y0_n-next_line_cos-j*cos_roll, 1);
+                                                ~~~~~~~~~~~~                                ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ssd1306.c(498): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_n-next_line_sin-j*sin_roll, y0_n-next_line_cos-j*cos_roll, 1);
+                                                ~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ssd1306.c(512): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        x0_p = x+i-b*sin_roll;
+                             ~ ~~~^~~~~~~~~~~
+ssd1306.c(513): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        y0_p = i*a1+y-b*cos_roll;
+                             ~ ~~~~~~^~~~~~~~~~~
+ssd1306.c(514): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        x0_n = x-i-b*sin_roll;
+                             ~ ~~~^~~~~~~~~~~
+ssd1306.c(515): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        y0_n = -i*a1+y-b*cos_roll;
+                             ~ ~~~~~~~^~~~~~~~~~~
+ssd1306.c(516): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        next_line_sin = PX180DEG*sin_roll;
+                                      ~ ~~~~~~~~^~~~~~~~~
+ssd1306.c(517): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                        next_line_cos = PX180DEG*cos_roll;
+                                      ~ ~~~~~~~~^~~~~~~~~
+ssd1306.c(535): warning: misleading indentation; statement is not part of the previous 'if' [-Wmisleading-indentation]
+                                for(j = 0; j<PX180DEG; j+=FILL_DENSITY){
+                                ^
+ssd1306.c(531): note: previous statement is here
+                        if((x0_n+next_line_sin>=0) && (x0_n+next_line_sin<WIDTH) && (y0_n+next_line_cos>=0) && (y0_n+next_line_cos<HEIGHT)) 
+                        ^
+ssd1306.c(537): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_p+j*sin_roll, y0_p+j*cos_roll, 1);
+                                                ~~~~~~~~~~~~                  ~~~~^~~~~~~~~~~
+ssd1306.c(537): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_p+j*sin_roll, y0_p+j*cos_roll, 1);
+                                                ~~~~~~~~~~~~ ~~~~^~~~~~~~~~~
+ssd1306.c(539): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_n+j*sin_roll, y0_n+j*cos_roll, 1);
+                                                ~~~~~~~~~~~~                  ~~~~^~~~~~~~~~~
+ssd1306.c(539): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_n+j*sin_roll, y0_n+j*cos_roll, 1);
+                                                ~~~~~~~~~~~~ ~~~~^~~~~~~~~~~
+ssd1306.c(543): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_p-next_line_sin-j*sin_roll, y0_p-next_line_cos-j*cos_roll, 1);
+                                                ~~~~~~~~~~~~                                ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ssd1306.c(543): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_p-next_line_sin-j*sin_roll, y0_p-next_line_cos-j*cos_roll, 1);
+                                                ~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ssd1306.c(545): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_n-next_line_sin-j*sin_roll, y0_n-next_line_cos-j*cos_roll, 1);
+                                                ~~~~~~~~~~~~                                ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ssd1306.c(545): warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+                                                DrawPointNew(x0_n-next_line_sin-j*sin_roll, y0_n-next_line_cos-j*cos_roll, 1);
+                                                ~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ssd1306.c(351): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        int16_t x0_p, x0_n, y0_p, y0_n, next_line_sin, next_line_cos;
+                ^
+ssd1306.c(340): warning: variable 'diagonal_angle1' set but not used [-Wunused-but-set-variable]
+        uint8_t diagonal_angle, diagonal_angle1;
+                                ^
+ssd1306.c(470): warning: variable 'PX180DEG' may be uninitialized when used here [-Wconditional-uninitialized]
+                        next_line_sin = PX180DEG*sin_roll;
+                                        ^~~~~~~~
+ssd1306.c(339): note: initialize the variable 'PX180DEG' to silence this warning
+        int16_t PX180DEG;
+                        ^
+                         = 0
+ssd1306.c(557): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                                DrawPointNew(64+i, 31+j, 1);
+                                ~~~~~~~~~~~~       ~~^~
+ssd1306.c(557): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                                DrawPointNew(64+i, 31+j, 1);
+                                ~~~~~~~~~~~~ ~~^~
+ssd1306.c(558): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                                DrawPointNew(64-i, 31+j, 1);
+                                ~~~~~~~~~~~~       ~~^~
+ssd1306.c(558): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                                DrawPointNew(64-i, 31+j, 1);
+                                ~~~~~~~~~~~~ ~~^~
+ssd1306.c(563): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                                DrawPointNew(63+j, 32-i, 1);
+                                ~~~~~~~~~~~~       ~~^~
+ssd1306.c(563): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                                DrawPointNew(63+j, 32-i, 1);
+                                ~~~~~~~~~~~~ ~~^~
+92 warnings generated.
+compiling ssd1306.c...
+systick.c(2): warning: In file included from...
+./systick.h(4): warning: In file included from...
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+3 warnings generated.
+compiling systick.c...
+mpu6050.c(1): warning: In file included from...
+./mpu6050.h(4): warning: In file included from...
+./i2c.h(4): warning: In file included from...
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+mpu6050.c(3): warning: no previous extern declaration for non-static variable 'data' [-Wmissing-variable-declarations]
+char data;
+     ^
+mpu6050.c(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char data;
+^
+mpu6050.c(4): warning: no previous extern declaration for non-static variable 'sensors_data' [-Wmissing-variable-declarations]
+char sensors_data[14];
+     ^
+mpu6050.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char sensors_data[14];
+^
+5 warnings generated.
+compiling mpu6050.c...
+linking...
+Program Size: Code=22144 RO-data=872 RW-data=0 ZI-data=2696  
+".\Objects\proj18_ssd1306_i2c.axf" - 0 Error(s), 140 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103VC
+  ./RTE/_Target_1
+  C:/Users/Guest/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Guest/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_hd.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>
